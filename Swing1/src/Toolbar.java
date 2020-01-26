@@ -8,24 +8,24 @@ import javax.swing.JPanel;
 
 public class Toolbar extends JPanel implements ActionListener {
 	
-	private JButton helloButton;
-	private JButton goodbyeButton;
+	private JButton permamentButton;
+	private JButton contracotrButton;
 	
 	
 	private StringListener textListener;
 	//Konstruktor toolbaru
 public Toolbar() {
 	setBorder(BorderFactory.createEtchedBorder());
-	helloButton = new JButton("Hello");
-	goodbyeButton = new JButton("Goodbye");
+	permamentButton = new JButton("Permament");
+	contracotrButton = new JButton("Contractor");
 	
-	helloButton.addActionListener(this);
-	goodbyeButton.addActionListener(this);
+	permamentButton.addActionListener(this);
+	contracotrButton.addActionListener(this);
 	
 	setLayout(new FlowLayout(FlowLayout.LEFT));
 	
-	add(helloButton);
-	add(goodbyeButton);
+	add(permamentButton);
+	add(contracotrButton);
 	
 	
 }
@@ -37,19 +37,19 @@ public void setStringListener(StringListener listener) {
 public void actionPerformed(ActionEvent e) {
 	JButton clicked = (JButton)e.getSource();
 	
-	if(clicked == helloButton) {
+	if(clicked == permamentButton) {
 		//toolbar nie wie o tym co sie znajduje w text area, jedynie referencja do Stringlistener
 		if(textListener !=null) {
 			//gdy naciskamy przycisk toolbar wywoluje metode textEmitted ktora tak naprawde jest anonimowa klasa z MainFrame
-			textListener.textEmitted("Hello\n");
+			textListener.textEmitted("Permement ");
 			
 		}
 		//textPanel.appendText("Hello\n");
 		
 	}
-	else if(clicked == goodbyeButton)
+	else if(clicked == contracotrButton)
 		if(textListener !=null) {
-			textListener.textEmitted("Goodbye\n");
+			textListener.textEmitted("Contractor ");
 			
 		//textPanel.appendText("Goodbye\n");
 }

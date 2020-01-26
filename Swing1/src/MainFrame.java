@@ -12,7 +12,7 @@ public class MainFrame extends JFrame {
 	private FormPanel formPanel;
 	
 	public MainFrame() {
-		super("Hello World");
+		super("Worker Form");
 	
 		setLayout(new BorderLayout());
 		
